@@ -1,0 +1,58 @@
+[ 
+    { 
+      "id": 1 ,
+       "name": "iphone5", 
+        "img": "https://images.pexels.com/photos/193004/pexels-photo-193004.jpeg?cs=srgb&dl=pexels-torsten-dettlaff-193004.jpg&fm=jpg", 
+        "des": "The iPhone joined several competing products in the smartphone market, and critics and fans alike noted that it offered few truly original features. ", 
+         "price": "$1000" ,
+         "quantity": 1
+    }, 
+    { 
+        "id": 2 ,
+         "name": "iphone6", 
+          "img": "https://images.pexels.com/photos/1275228/pexels-photo-1275228.jpeg?cs=srgb&dl=pexels-hasan-albari-1275228.jpg&fm=jpg", 
+          "des": "The iPhone is a line of smartphones designed and marketed by Apple Inc. These devices use Apple's iOS mobile operating system. The first-generation iPhone ", 
+           "price": "$3000" ,
+           "quantity": 1
+      }, 
+      { 
+        "id": 3 ,
+         "name": "iphone7", 
+          "img": "https://images.pexels.com/photos/270686/pexels-photo-270686.jpeg?cs=srgb&dl=pexels-pixabay-270686.jpg&fm=jpg", 
+          "des": "Reliable battery life – I can excerpt way more control on how I spend it, than I could on my Android. ..", 
+           "price": "$9000" ,
+           "quantity": 1
+      }, 
+      { 
+        "id": 4 ,
+         "name": "iphone8", 
+          "img": "https://images.pexels.com/photos/270283/pexels-photo-270283.jpeg?cs=srgb&dl=pexels-pixabay-270283.jpg&fm=jpg", 
+          "des": "iPhones have extreme security. iPhones works beautifully with Macs", 
+           "price": "$4000" ,
+           "quantity": 1
+      }, 
+      { 
+        "id": 5 ,
+         "name": "iphone3", 
+          "img": "https://images.pexels.com/photos/1042143/pexels-photo-1042143.jpeg?cs=srgb&dl=pexels-essow-1042143.jpg&fm=jpg", 
+          "des": "It was originally invented to call or text someone. now it is used to get on the internet, text, facetime, and call", 
+           "price": "$5000" ,
+           "quantity": 1
+      }, 
+      { 
+        "id": 6 ,
+         "name": "iphone12", 
+          "img": "https://images.pexels.com/photos/193004/pexels-photo-193004.jpeg?cs=srgb&dl=pexels-torsten-dettlaff-193004.jpg&fm=jpg", 
+          "des": " The iPhone is a smartphone made by Apple that combines a computer, iPod, digital camera and cellular phone into one device with a touchscreen interface", 
+           "price": "$4000" ,
+           "quantity": 1
+      }, 
+      { 
+        "id": 7 ,
+         "name": "iphone13", 
+          "img": "https://images.pexels.com/photos/193004/pexels-photo-193004.jpeg?cs=srgb&dl=pexels-torsten-dettlaff-193004.jpg&fm=jpg", 
+          "des": "The iPhone runs the iOS operating system, and in 2021 when the iPhone 13 was introduced, it offered up to 1 TB of storage and a 12-megapixel camera.", 
+           "price": "$2000" ,
+           "quantity": 1
+      }
+]
