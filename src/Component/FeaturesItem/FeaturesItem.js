@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
     const [item, setItem] = useState([]);
@@ -7,14 +8,19 @@ const Services = () => {
             .then(res => res.json())
             .then(data => setItem(data))
 
-    }, [])
+    }, []) 
+    const navigate = useNavigate()
+    const navigateUpdate =(id)=>{ 
+        navigate(`/update/${id}`)
+     }
     return (
         <div className='container'>
             <h2 className='text-center'> feature Items</h2>
             <div className="row">
                 {
                     item.map((items) => {
-                        const { name, img, des, price, quantity } = items
+                        const { id, name, img, des, price, quantity } = items 
+                        
                         return (
                             <div className="col-lg-4">
                                 <div class="card" >
@@ -24,7 +30,7 @@ const Services = () => {
                                         <p class="card-text"> {des}</p>
                                         <p class="card-text"> {price}</p>
                                         <p class="card-text"> {quantity}</p>
-                                        <a href="/" class="btn btn-primary"> updated</a>
+                                        <button onClick={()=>{navigateUpdate(id)}} class="btn btn-primary"> updated</button>
                                     </div>
                                 </div>
                             </div>

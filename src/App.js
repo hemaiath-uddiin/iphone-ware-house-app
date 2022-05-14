@@ -7,7 +7,8 @@ import Item from "./Component/FeaturesItem/FeaturesItem"
 import Navbar from './Component/Navbar/Navbar';
 import Loging from './Component/Loging/Loging';
 import Signing from './Component/Signig/Signing';
-
+import RequerAuth from './Component/RequerAuth/RequerAuth';
+import Updated from "./Component/Updated/Update";
 
 
 function App() {
@@ -19,7 +20,13 @@ function App() {
             <Route path="/item" element={<Item></Item>} />
             <Route path="/loging" element={<Loging></Loging>} />
             <Route path="/signing" element={<Signing></Signing>} />
-            
+             <Route path='/update/:id' element={ 
+                <RequerAuth> 
+                   <Updated></Updated>
+
+                </RequerAuth>
+
+             }  > </Route>
             
             </Routes>
           
