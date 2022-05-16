@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
+import "./FeaturesItem.css"
 
 const Services = () => {
     const [item, setItem] = useState([]);
     useEffect(() => {
-        fetch('item.json')
+        fetch('http://localhost:5000/item')
             .then(res => res.json())
             .then(data => setItem(data))
 
@@ -19,7 +20,7 @@ const Services = () => {
             <div className="row">
                 {
                     item.map((items) => {
-                        const { id, name, img, des, price, quantity } = items 
+                        const { _id, name, img, des, price, quantity } = items 
                         
                         return (
                             <div className="col-lg-4">
@@ -30,7 +31,8 @@ const Services = () => {
                                         <p class="card-text"> {des}</p>
                                         <p class="card-text"> {price}</p>
                                         <p class="card-text"> {quantity}</p>
-                                        <button onClick={()=>{navigateUpdate(id)}} class="btn btn-primary"> updated</button>
+                                        <button onClick={()=>{navigateUpdate(_id)}} class="btn btn-primary btns"> updated</button> 
+                                          <button className='btn btn-primary btns'> Manage Inventories </button>
                                     </div>
                                 </div>
                             </div>
