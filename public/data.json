@@ -1,0 +1,22 @@
+[ 
+   {  "id":1,
+       "name": "Iphone17" ,
+        "des": "this is one of the best mobile", 
+         "img":"https://images.pexels.com/photos/5750001/pexels-photo-5750001.jpeg?cs=srgb&dl=pexels-martin-sanchez-5750001.jpg&fm=jpg",
+         "color": "white"
+   }, 
+   { "id":2,
+    "name": "Iphone17" ,
+     "des": "this is one of the best mobile", 
+      "img":"https://images.pexels.com/photos/6612237/pexels-photo-6612237.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-6612237.jpg&fm=jpg/",
+      "color": "blue"
+}, 
+{   "id":3,
+    "name": "Iphone17" ,
+     "des": "this is one of the best mobile", 
+      "img":"https://images.pexels.com/photos/7481388/pexels-photo-7481388.jpeg?cs=srgb&dl=pexels-mart-production-7481388.jpg&fm=jpg",
+      "color": "black"
+}
+
+
+]

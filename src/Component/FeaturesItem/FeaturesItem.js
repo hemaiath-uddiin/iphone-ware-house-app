@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom'; 
 import "./FeaturesItem.css"
 
 const Services = () => {
     const [item, setItem] = useState([]);
-    useEffect(() => {
+    useEffect(() => { 
         fetch('http://localhost:5000/item')
             .then(res => res.json())
             .then(data => setItem(data))
@@ -32,7 +32,7 @@ const Services = () => {
                                         <p class="card-text"> {price}</p>
                                         <p class="card-text"> {quantity}</p>
                                         <button onClick={()=>{navigateUpdate(_id)}} class="btn btn-primary btns"> updated</button> 
-                                          <button className='btn btn-primary btns'> Manage Inventories </button>
+                                          <Link to="/inventory" className='btn btn-primary btns'> Manage Inventories </Link>
                                     </div>
                                 </div>
                             </div>
