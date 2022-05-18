@@ -3,7 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import "./FeaturesItem.css"
 
 const Services = () => {
-    const [item, setItem] = useState([]);
+    const [item, setItem] = useState([]); 
+   
+       
     useEffect(() => { 
         fetch('http://localhost:5000/item')
             .then(res => res.json())

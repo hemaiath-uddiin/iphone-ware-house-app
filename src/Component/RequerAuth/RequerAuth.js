@@ -6,8 +6,12 @@ import auth from '../../fire.init.auths';
 const RequerAuth = ({children}) => {
  
        
-        const [user] = useAuthState(auth);
-        const location = useLocation(); 
+        const [user,loading] = useAuthState(auth); 
+       
+        const location = useLocation();  
+        if(loading){ 
+               return <h2 className='text center'> Loading </h2>
+              }
         if(!user){ 
            return <Navigate to="/loging" state={{from: location}} replace/>
         }

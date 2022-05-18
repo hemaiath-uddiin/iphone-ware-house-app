@@ -31,7 +31,20 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/item">Feature</Link>
+              </li>  
+              <li className="nav-item">
+                 { 
+                    user &&  <Link className="nav-link active" aria-current="page" to="/manage">ManageItem</Link>
+                 }
+               
+              </li> 
+              <li className="nav-item">
+                 { 
+                    user &&  <Link className="nav-link active" aria-current="page" to="/additem">Add Item</Link>
+                 }
+               
               </li>
+
               <li className="nav-item">
                 {
                   user ?
