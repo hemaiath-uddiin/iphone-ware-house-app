@@ -60,7 +60,11 @@ const Update = ({ children }) => {
             })
             .then(res=>res.json()) 
             .then(json=>{ 
-                console.log("succes",json); 
+                const proceeds = window.confirm("Are You sure want to Restock") 
+                  if(proceeds){ 
+                     console.log("Do You want to add quantity",json);
+                  }
+                //  alert("Do You want to add quantity",json); 
                 loadData()
             })
               
