@@ -1,7 +1,8 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle,  } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; 
+ import './Loging.css'
 import auth from '../../fire.init.auths';
 const Loging = () => {
     const [email,setEmail] = useState('');
@@ -24,7 +25,7 @@ const [signInWithEmailAndPassword, user,loading, error ] = useSignInWithEmailAnd
     const [signInWithGoogle] = useSignInWithGoogle(auth); 
     
     if(user){ 
-        navigate("/item")
+        navigate("/")
     }  
     if (error) {
         return (
@@ -39,8 +40,8 @@ const [signInWithEmailAndPassword, user,loading, error ] = useSignInWithEmailAnd
    
     return (
         <div className=
-            'container'>
-            <form onSubmit={loginFormHandle} className='w-50 m-auto'>
+            'container loging'>
+            <form onSubmit={loginFormHandle} className='w-50 m-auto loging'>
                 <div className=
                     "mb-3">
                     <label for="exampleInputEmail1" className=
@@ -58,10 +59,12 @@ const [signInWithEmailAndPassword, user,loading, error ] = useSignInWithEmailAnd
                         "form-control" id="exampleInputPassword1" />
                 </div>
 
-                <button type="submit" className=
+               <div className="btns"> 
+               <button type="submit" className=
                     "btn btn-primary">Submit</button> 
                     <button onClick={()=>{signInWithGoogle()}} className=
                     "btn btn-danger">SignIn with Google</button> 
+               </div>
 
             </form> 
                <div className="singIn"> 

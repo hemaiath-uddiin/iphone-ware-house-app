@@ -1,0 +1,10 @@
+.container.loging {
+    margin-top: 75px;
+    background: #e5e5e5;
+    padding: 10px;
+    border-radius: 10px;
+} 
+.btns {
+    display: flex;
+    justify-content: space-between;
+}

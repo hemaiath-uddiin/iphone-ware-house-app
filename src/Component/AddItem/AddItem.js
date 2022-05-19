@@ -1,6 +1,7 @@
 
-import React from 'react';
-import { useForm } from "react-hook-form";
+import React from 'react'; 
+import { useForm } from "react-hook-form"; 
+import "./AddItem.css"
 const AddItem = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
@@ -20,18 +21,21 @@ const AddItem = () => {
         })
     }
     return (
-        <div>
-            <h2>this is add item </h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <input placeholder='name' {...register("Name", { required: true, maxLength: 20 })} />
+        <div className='container' >
+            <h2 className='title text-center'> Add Item </h2>
+              <div className="form_wraper"> 
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <input placeholder='name' {...register("Name", { required: true, maxLength: 20 })} /> <br />
 
-                <input placeholder='description' {...register("description",)} />
-                <input placeholder='photo url' type="text" {...register("img",)} />
-                <input placeholder='price' type="number" {...register("price",)} />
-                <input placeholder='quantity' type="number" {...register("quantity",)} />
+                <input placeholder='description' {...register("description",)} /> <br />
+                <input placeholder='photo url' type="text" {...register("img",)} /> <br />
+                <input placeholder='price' type="number" {...register("price",)} /> <br />
+                <input placeholder='quantity' type="number" {...register("quantity",)} /> <br />
 
-                <input type="submit" />
+                <input className='submite' type="submit" />
             </form>
+              
+              </div>
         </div>
     );
 };

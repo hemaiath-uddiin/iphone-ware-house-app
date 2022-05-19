@@ -2,7 +2,8 @@ import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
-import auth from '../../fire.init.auths';
+import auth from '../../fire.init.auths'; 
+import "./Navbar.css"
 
 
 // Put any other imports below so that CSS from your
@@ -15,9 +16,9 @@ const Navbar = () => {
   }
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">Navbar</Link>
+          <Link className="navbar-brand iphone" to="/"> Iphone Warehous</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -45,12 +46,12 @@ const Navbar = () => {
                
               </li>
 
-              <li className="nav-item">
+              <li className="nav-item singout">
                 {
                   user ?
-                    <button onClick={signOUt}> sigout</button>
+                    <button className='signOut' onClick={signOUt}> sigout</button>
                     :
-                    <Link className="nav-link" to="/loging">Loging</Link>
+                    <Link className="nav-link logg" to="/loging">Loging</Link>
 
                 }
               </li>
