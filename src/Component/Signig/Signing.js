@@ -25,7 +25,7 @@ const [
     user,
     loading,
     error,
-  ] = useCreateUserWithEmailAndPassword(auth);
+  ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
   if (error) {
     return (
       <div>
