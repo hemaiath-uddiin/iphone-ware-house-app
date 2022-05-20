@@ -8,8 +8,10 @@ const Update = ({ children }) => {
      //update state
     const [update,setUpdate] = useState('') ; 
       const updateQuantity =(e)=>{ 
-          setUpdate(e.target.value)
-      } 
+          setUpdate(e.target.value) 
+          
+      }  
+    
       //load data 
       const loadData =()=>{ 
         const url =`http://localhost:5000/item/${id}`;
@@ -76,25 +78,25 @@ const Update = ({ children }) => {
          }
  
       
-    
+    // https://stackoverflow.com/questions/72323480/how-to-use-jwt-token-what-is-the-need-for-using-it
      
 
-      }
+      } 
        } 
     return (
 
         <div>
-            <h2 className='text-center'> full Details </h2>
+            <h2 className='text-center'> Item Details </h2>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8">
-                        <div className="card" >
+                        <div className="card card_style" >
                             <img src={setupdateDtls.img} className="card-img-top" alt="..." />
                             <div className="card-body">
-                                <p className="card-text"> Name: {setupdateDtls.name}  </p>
-                                <p className="card-text"> quantity: {setupdateDtls.quantity} </p>
-                                <p className="card-text"> Price: {setupdateDtls.price}  </p>
-                                <p className="card-text"> Description: {setupdateDtls.des}  </p>
+                                <p className="card-text"> <span>Name: </span>  {setupdateDtls.name}  </p>
+                                <p className="card-text"> <span>quantity: </span>  {setupdateDtls.quantity} </p>
+                                <p className="card-text"> <span>Price: </span>  {setupdateDtls.price}  </p>
+                                <p className="card-text"> <span>Description: </span>  {setupdateDtls.des}  </p>
                                 <button onClick={()=>{deleverd()}}  className='btn btn-danger'> Deleverd</button>
                                 <button  className='btn btn-primary'> Manage Inventories </button>
                             </div>
@@ -108,7 +110,7 @@ const Update = ({ children }) => {
 
                             <form onSubmit={updateaddQuantity}>
                                 <input onBlur={updateQuantity} type="number" placeholder='Enter Number' />  
-                                  <button type="submit"> Restock</button>
+                                  <button className='btn btn-primary' type="submit"> Restock</button>
                                 <br />
                             </form>
 

@@ -21,7 +21,9 @@ const Loging = () => {
     if (user) {
         navigate("/")
     } 
-    
+     if(loading){ 
+       <h2> loading</h2>
+     }
     const loginFormHandle = (e) => {
         e.preventDefault();
         console.log(email, password);
@@ -98,8 +100,8 @@ const Loging = () => {
                 </div>
 
             </form>
-            <div className="singIn">
-                <p>create an new account <span> <Link to="/signing" > SignIn</Link>  </span></p>
+            <div className="singIn" style={{fontSize:"20px"}}>
+                <p>create a new account <span> <Link to="/signing" > SignIn</Link>  </span></p>
 
             </div>
         </div>
