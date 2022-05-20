@@ -15,7 +15,7 @@ const Navbar = () => {
     signOut(auth)
   }
   return (
-    <div>
+    <div className='navs mt-5'>
       <nav className="navbar navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link className="navbar-brand iphone" to="/"> Iphone Warehous</Link>
@@ -31,8 +31,11 @@ const Navbar = () => {
                 <Link className="nav-link active" aria-current="page" to="/latest">Latest</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/item">Feature</Link>
-              </li>  
+                <Link className="nav-link active" aria-current="page" to="/item">Item</Link>
+              </li>   
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/blog">Blog</Link>
+              </li>
               <li className="nav-item">
                  { 
                     user &&  <Link className="nav-link active" aria-current="page" to="/manage">ManageItem</Link>

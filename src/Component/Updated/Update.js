@@ -5,10 +5,12 @@ import { useParams, } from 'react-router-dom';
 const Update = ({ children }) => {
     const { id } = useParams();
     const [setupdateDtls, setUpdateDtls] = useState({}) ;
+     //update state
     const [update,setUpdate] = useState('') ; 
       const updateQuantity =(e)=>{ 
           setUpdate(e.target.value)
-      }
+      } 
+      //load data 
       const loadData =()=>{ 
         const url =`http://localhost:5000/item/${id}`;
         fetch(url)
@@ -20,7 +22,7 @@ const Update = ({ children }) => {
        loadData() 
      
     },[])  
-
+   //update delevered button
        const deleverd=()=>{ 
            const newQuantity = setupdateDtls.quantity-1 ;
            const url =`http://localhost:5000/item/${id}`;
@@ -39,7 +41,8 @@ const Update = ({ children }) => {
                             
                         })
            
-       }
+       } 
+       //update quantity
     const updateaddQuantity =(e)=>{ 
         e.preventDefault() ;
         let newQuantity = update ; 
@@ -64,7 +67,7 @@ const Update = ({ children }) => {
                   if(proceeds){ 
                      console.log("Do You want to add quantity",json);
                   }
-                //  alert("Do You want to add quantity",json); 
+                
                 loadData()
             })
               

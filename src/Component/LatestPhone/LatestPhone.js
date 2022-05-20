@@ -16,7 +16,7 @@ const LatestPhone = () => {
                    const {img,name,des} = latestPhone
                     return( 
                       <div className="col-lg-4"> 
-                            <div class="card" >
+                            <div class="card cards_style" >
                                     <img src={img} class="card-img-top" alt="..." />
                                     <div class="card-body">
                                         <h5 class="card-title"> {name} </h5>

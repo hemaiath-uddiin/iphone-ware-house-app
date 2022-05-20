@@ -20,10 +20,11 @@ const Loging = () => {
     const navigate = useNavigate()
     if (user) {
         navigate("/")
-    }
+    } 
+    
     const loginFormHandle = (e) => {
         e.preventDefault();
-        toast(email, password);
+        console.log(email, password);
         signInWithEmailAndPassword(email, password)
 
 

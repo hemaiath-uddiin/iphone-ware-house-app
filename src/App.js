@@ -13,18 +13,27 @@ import ManageInventory from './Component/ManageInventory/ManageInventory';
 import LatestPhone from './Component/LatestPhone/LatestPhone';
 import ManageItem from './Component/ManageItem/ManageItem';
 import AddItem from './Component/AddItem/AddItem';
+import Footer from './Component/Loging/Footer/Footer';
+import Space from './Component/Space/Space';
+import Blog from './Component/Blog/Blog';
+import NotFount from './Component/NotFound/NotFount';
 
 
 function App() {
    return (
       <div className="App">
-         <Navbar></Navbar>
+         <Navbar></Navbar>  
+           <Space></Space>
+        
          <Routes>
             <Route path="/" element={<Home></Home>} />
             <Route path="/item" element={<Item></Item>} />
             <Route path="/inventory" element={<ManageInventory></ManageInventory>} />
             <Route path="/latest" element={<LatestPhone />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/loging" element={<Loging></Loging>} />
+            <Route path="*" element={<NotFount></NotFount>} />
+            
             <Route path="/signing" element={<Signing></Signing>} />
             <Route path='/update/:id' element={
                <RequerAuth>  <Updated></Updated> </RequerAuth>
@@ -39,7 +48,7 @@ function App() {
 
             } > </Route>
          </Routes>
-
+        
       </div>
    );
 }

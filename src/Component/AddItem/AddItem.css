@@ -1,4 +1,4 @@
-/* .form_wraper {display: flex;justify-content: center;padding: 10px;background: gainsboro;}
+.form_wraper {display: flex;justify-content: center;padding: 10px;background: gainsboro;}
 
 
 
@@ -13,4 +13,4 @@ input.submite {
     font-size: 20px;
     color: white;
     font-weight: bold;
-} */
+}

@@ -15,24 +15,26 @@ const Services = () => {
     const navigate = useNavigate()
     const navigateUpdate =(id)=>{ 
         navigate(`/update/${id}`)
-     }
+     } 
+    
     return (
         <div className='container'>
-            <h2 className='text-center'> feature Items</h2>
-            <div className="row">
+            <h2 className='text-center mb-5'> Item</h2>
+           
+              <div className="row">
                 {
                     item.map((items) => {
                         const { _id, name, img, des, price, quantity } = items 
                         
                         return (
                             <div className="col-lg-4">
-                                <div class="card" >
+                                <div class="card card_style" >
                                     <img src={img} class="card-img-top" alt="..." />
                                     <div class="card-body">
-                                        <h5 class="card-title"> {name} </h5>
-                                        <p class="card-text"> {des}</p>
-                                        <p class="card-text"> {price}</p>
-                                        <p class="card-text"> {quantity}</p>
+                                        <h5 class="card-title"> <span>Name:</span> {name} </h5>
+                                        <p class="card-text"><span>Description</span> {des}</p>
+                                        <p class="card-text"><span>Price:</span> {price}</p>
+                                        <p class="card-text"><span>Quantity:</span> {quantity}</p>
                                         <button onClick={()=>{navigateUpdate(_id)}} class="btn btn-primary btns"> updated</button> 
                                           <Link to="/inventory" className='btn btn-primary btns'> Manage Inventories </Link>
                                     </div>
@@ -45,6 +47,8 @@ const Services = () => {
 
             </div>     
 
+           
+            
         </div>
     );
 };

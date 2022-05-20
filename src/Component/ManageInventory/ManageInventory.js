@@ -44,12 +44,12 @@ const ManageInventory = () => {
 
                         return (
                             <div className="col-lg-4">
-                                <div class="card">
+                                <div class="card card_style ">
                                     <img className='img-fluid' src={img} class="card-img-top" alt="..." />
                                     <div class="card-body">
                                         <p> {name} </p>
-                                        <p class="card-text"> Price: {price} </p>
-                                        <p class="card-text"> Description: {des} </p>
+                                        <p class="card-text"> <span>Price: </span>  {price} </p>
+                                        <p class="card-text"> <span>Description: </span>  {des} </p>
                                         <p class="card-text"> Quantity: {quantity} </p>
                                         <button onClick={() => { handleDelet(inventory._id) }} className='btn btn-danger'> Delet  </button>
 
