@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
-import { useParams, } from 'react-router-dom';
+import { Link, useParams, } from 'react-router-dom';
 
 const Update = ({ children }) => {
     const { id } = useParams();
@@ -98,7 +98,7 @@ const Update = ({ children }) => {
                                 <p className="card-text"> <span>Price: </span>  {setupdateDtls.price}  </p>
                                 <p className="card-text"> <span>Description: </span>  {setupdateDtls.des}  </p>
                                 <button onClick={()=>{deleverd()}}  className='btn btn-danger'> Deleverd</button>
-                                <button  className='btn btn-primary'> Manage Inventories </button>
+                                <Link  to="/inventory" className='btn btn-primary'> Manage Inventories </Link>
                             </div>
                         </div>
 
