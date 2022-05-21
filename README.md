@@ -4,7 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run: 
+* making the website using react js 
+* using fire base React Route 
+* Beautiful user experience 
+* also use mongodb database 
+* fully responsive
 
 ### `npm start`
 
