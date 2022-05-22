@@ -1,7 +1,6 @@
 # Getting Started with Create React App
 
-This project was created with with [Phone wearhouse]([https://github.com/facebook/create-react-app](https://iphone-warehouse-auth.web.app/)](https://iphoauth.web.app/)).
-
+This project was created with with [Phone wearhouse](https://iphone-warehouse-auth.web.app/)
 ## Available Scripts
 
 In the project directory, you can run: 
