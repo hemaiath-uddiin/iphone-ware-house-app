@@ -101,7 +101,7 @@ const Loging = () => {
 
             </form>
             <div className="singIn" style={{fontSize:"20px"}}>
-                <p>create a new account <span> <Link to="/signing" > SignIn</Link>  </span></p>
+                <p>create a new account pleas sign in <span> <Link to="/signing" > SignIn</Link>  </span></p>
 
             </div>
         </div>
