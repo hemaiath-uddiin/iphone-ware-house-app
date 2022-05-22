@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was created with with [Phone wearhouse](https://iphone-warehouse-auth.web.app/)
+This project live link [Phone wearhouse](https://iphone-warehouse-auth.web.app/)
 ## Available Scripts
 
 In the project directory, you can run: 
