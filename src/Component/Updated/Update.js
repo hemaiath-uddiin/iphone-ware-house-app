@@ -14,7 +14,7 @@ const Update = ({ children }) => {
     
       //load data 
       const loadData =()=>{ 
-        const url =`http://localhost:5000/item/${id}`;
+        const url =`https://protected-dawn-94435.herokuapp.com/item/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(addQuantity => setUpdateDtls(addQuantity))
@@ -27,7 +27,7 @@ const Update = ({ children }) => {
    //update delevered button
        const deleverd=()=>{ 
            const newQuantity = setupdateDtls.quantity-1 ;
-           const url =`http://localhost:5000/item/${id}`;
+           const url =`https://protected-dawn-94435.herokuapp.com/item/${id}`;
            fetch(url, {
                         method:"PUT",
                         headers:{'content-type': 'application/json'},
@@ -57,7 +57,7 @@ const Update = ({ children }) => {
 
     // addQuantity send to the server   
          try {
-            fetch(`http://localhost:5000/item/${id}`, {
+            fetch(`https://protected-dawn-94435.herokuapp.com/item/${id}`, {
                 method:"PUT",
                 headers:{'content-type': 'application/json'},
                 body: JSON.stringify(data)

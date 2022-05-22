@@ -4,7 +4,7 @@ import { button } from 'react-router-dom';
 const ManageInventory = () => {
     const [inventory, setInventory] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/item')
+        fetch('http://https://protected-dawn-94435.herokuapp.com/item')
             .then(res => res.json())
             .then(data => setInventory(data))
 
@@ -14,7 +14,7 @@ const ManageInventory = () => {
         const proceed = window.confirm("Are You sure want to Delet") 
        
         if (proceed) {
-            const url = `http://localhost:5000/item/${id}`
+            const url = `https://protected-dawn-94435.herokuapp.com/item/${id}`
             console.log("deletin id", id);
             fetch(url, {
                 method: "DELETE"

@@ -8,7 +8,7 @@ const AddItem = () => {
        
   
         console.log(data);
-        const url =`http://localhost:5000/item`
+        const url =`https://protected-dawn-94435.herokuapp.com/item`
         fetch(url, {
             method: 'POST',
             headers:{'content-type': 'application/json'},

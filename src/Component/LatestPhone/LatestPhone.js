@@ -3,7 +3,7 @@ import { useState } from 'react';
 const LatestPhone = () => {
     const [latestItem,setLatestitem] = useState([])  
     useEffect(()=>{ 
-        fetch('http://localhost:5000/latest') 
+        fetch('https://protected-dawn-94435.herokuapp.com/latest') 
         .then(res=>res.json()) 
         .then(data=> setLatestitem(data))
     },[])
