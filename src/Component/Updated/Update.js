@@ -1,18 +1,24 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
-import { Link, useParams, } from 'react-router-dom'; 
-import "../Updated/Update.responsive.css"
-
+import { Link, useParams, } from 'react-router-dom';  
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import "../Updated/Update.responsive.css" 
+import './Update.css' 
+ 
 const Update = ({ children }) => {
     const { id } = useParams();
     const [setupdateDtls, setUpdateDtls] = useState({}) ;
      //update state
     const [update,setUpdate] = useState('') ; 
       const updateQuantity =(e)=>{ 
-          setUpdate(e.target.value) 
+          setUpdate(e.target.value)   
+       
+           
           
-      }  
-    
+      }   
+ 
+      const notify = () => toast("Quantity has been Restock");
       //load data 
       const loadData =()=>{ 
         const url =`https://protected-dawn-94435.herokuapp.com/item/${id}`;
@@ -47,7 +53,8 @@ const Update = ({ children }) => {
        } 
        //update quantity
     const updateaddQuantity =(e)=>{ 
-        e.preventDefault() ;
+        e.preventDefault() ; 
+       
         let newQuantity = update ; 
          if(newQuantity> 0){ 
     const addQuantity = parseInt(setupdateDtls.quantity)+parseInt(newQuantity)
@@ -55,7 +62,7 @@ const Update = ({ children }) => {
      let data = {
         newQuantity: addQuantity
      } 
-
+    
     // addQuantity send to the server   
          try {
             fetch(`https://protected-dawn-94435.herokuapp.com/item/${id}`, {
@@ -66,19 +73,21 @@ const Update = ({ children }) => {
             })
             .then(res=>res.json()) 
             .then(json=>{ 
-                const proceeds = window.confirm("Are You sure want to Restock") 
-                  if(proceeds){ 
-                     console.log("Do You want to add quantity",json);
-                  }
-                
-                loadData()
+         
+             
+                // const proceeds = window.confirm("Are You sure want to Restock") 
+                //   if(proceeds){ 
+                //     
+                //   }
+                console.log("Do You want to add quantity",json);
+                loadData() 
             })
               
          } catch (error) {
              console.log(error,"error is here");
          }
  
-      
+       
     
      
 
@@ -90,7 +99,7 @@ const Update = ({ children }) => {
             <h2 id='h2' className='text-center '> Item Details </h2>
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-8">
+                    <div className="col-lg-12">
                         <div className="card card_style" >
                             <img src={setupdateDtls.img} className="card-img-top" alt="..." />
                             <div className="card-body">
@@ -101,30 +110,29 @@ const Update = ({ children }) => {
                                   <div className="btn_wraper"> 
                                   <button onClick={()=>{deleverd()}}  className='btn btn-danger'> Deleverd</button>
                                 <Link  to="/inventory" className='btn btn-primary'> Manage Inventories </Link>
-                                  
-                                  </div>
+                               
+                                  </div> 
+                                  <div className="restock">
+                            <h2> Restock Quantity </h2>
+
+                            <form  className='restock_form' onSubmit={updateaddQuantity}>
+                                <input onBlur={updateQuantity} type="number" placeholder='Restock Quantity' />  
+                                  <button onClick={notify}  className='restock_btn' type="submit"> Restock</button>
+                                <br />
+                            </form>
+                            <ToastContainer />
+                        </div>
+
                             </div>
                         </div>
 
                     </div>
 
-                    <div className="col-lg-4">
-                        <div className="restock">
-                            <h2> please gives the number of value for restock the Items </h2>
-
-                            <form className='restock_form' onSubmit={updateaddQuantity}>
-                                <input onBlur={updateQuantity} type="number" placeholder='Enter Number' />  
-                                  <button className='btn btn-primary' type="submit"> Restock</button>
-                                <br />
-                            </form>
-
-                        </div>
-
-
-                    </div>
+                  
 
                 </div>
-            </div>
+            </div> 
+            
         </div>
     );
 };
