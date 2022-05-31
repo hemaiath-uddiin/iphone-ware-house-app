@@ -11,8 +11,13 @@
 
 
 .restock form input {
-    outline: none;
+    outline: none; 
     border: none;
     padding: 7px 0px;
     border-radius: 3px;
-}
+}  
+@media only screen and (max-width: 600px) {
+    #h2 {
+      color: red;
+    }
+  }

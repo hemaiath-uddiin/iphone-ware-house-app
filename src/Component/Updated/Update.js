@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
-import { Link, useParams, } from 'react-router-dom';
+import { Link, useParams, } from 'react-router-dom'; 
+import "../Updated/Update.responsive.css"
 
 const Update = ({ children }) => {
     const { id } = useParams();
@@ -85,8 +86,8 @@ const Update = ({ children }) => {
        } 
     return (
 
-        <div>
-            <h2 className='text-center'> Item Details </h2>
+        <div className='container'>
+            <h2 id='h2' className='text-center '> Item Details </h2>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8">
@@ -97,8 +98,11 @@ const Update = ({ children }) => {
                                 <p className="card-text"> <span>quantity: </span>  {setupdateDtls.quantity} </p>
                                 <p className="card-text"> <span>Price: </span>  {setupdateDtls.price}  </p>
                                 <p className="card-text"> <span>Description: </span>  {setupdateDtls.des}  </p>
-                                <button onClick={()=>{deleverd()}}  className='btn btn-danger'> Deleverd</button>
+                                  <div className="btn_wraper"> 
+                                  <button onClick={()=>{deleverd()}}  className='btn btn-danger'> Deleverd</button>
                                 <Link  to="/inventory" className='btn btn-primary'> Manage Inventories </Link>
+                                  
+                                  </div>
                             </div>
                         </div>
 
@@ -108,7 +112,7 @@ const Update = ({ children }) => {
                         <div className="restock">
                             <h2> please gives the number of value for restock the Items </h2>
 
-                            <form onSubmit={updateaddQuantity}>
+                            <form className='restock_form' onSubmit={updateaddQuantity}>
                                 <input onBlur={updateQuantity} type="number" placeholder='Enter Number' />  
                                   <button className='btn btn-primary' type="submit"> Restock</button>
                                 <br />

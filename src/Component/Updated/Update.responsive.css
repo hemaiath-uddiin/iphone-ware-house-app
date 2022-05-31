@@ -1,0 +1,23 @@
+@media(max-width: 700px) {
+    .btn_wraper { 
+       display: flex; 
+       justify-content: space-between; 
+       margin-bottom: 20px;
+    } 
+    .restock{ 
+       margin-top: 20px;
+       
+    } 
+    .restock_form{ 
+        margin-top: 30px;
+    }
+  } 
+  @media(max-width:341px){ 
+     .btn_wraper { 
+         flex-direction: column; 
+         
+     } 
+     .btn_wraper button{ 
+         margin: 12px 0px;
+     }
+  }
