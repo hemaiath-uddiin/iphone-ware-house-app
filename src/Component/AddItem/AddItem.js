@@ -23,7 +23,7 @@ const AddItem = () => {
     return (
         <div className='container' >
             <h2 className='title text-center'> Add Item </h2>
-              <div className="form_wraper"> 
+              <div className="form_wraper mt-5"> 
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input placeholder='name' {...register("Name", { required: true, maxLength: 20 })} /> <br />
 
