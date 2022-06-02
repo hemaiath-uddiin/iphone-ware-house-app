@@ -9,7 +9,7 @@ import Loging from './Component/Loging/Loging';
 import Signing from './Component/Signig/Signing';
 import RequerAuth from './Component/RequerAuth/RequerAuth';
 import Updated from "./Component/Updated/Update";
-import ManageInventory from './Component/ManageInventory/ManageInventory';
+
 import LatestPhone from './Component/LatestPhone/LatestPhone';
 import ManageItem from './Component/ManageItem/ManageItem';
 import AddItem from './Component/AddItem/AddItem';
@@ -17,6 +17,7 @@ import Footer from './Component/Loging/Footer/Footer';
 import Space from './Component/Space/Space';
 import Blog from './Component/Blog/Blog';
 import NotFount from './Component/NotFound/NotFount';
+import ManageInventory from './Component/ManageInventory/ManageInventory';
 
 
 function App() {
@@ -25,12 +26,12 @@ function App() {
          <Navbar></Navbar>  
            <Space></Space>
         
-         <Routes>
+         <Routes> 
             <Route path="/" element={<Home></Home>} />
             <Route path="/item" element={<Item></Item>} />
-            <Route path="/inventory" element={<ManageInventory></ManageInventory>} />
+            <Route path="/manage" element={<ManageInventory></ManageInventory>} />
             <Route path="/latest" element={<LatestPhone />} />
-            <Route path="/blog" element={<Blog />} />
+           
             <Route path="/loging" element={<Loging></Loging>} />
             <Route path="*" element={<NotFount></NotFount>} />
             

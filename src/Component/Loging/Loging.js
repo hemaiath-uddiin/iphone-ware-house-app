@@ -85,7 +85,7 @@ const Loging = () => {
 
                 <div className="btns">
                     <button type="submit" className=
-                        "btn btn-primary">Submit</button>
+                        "submit">Submit</button>
                     <button
                         onClick={async () => {
                             await sendPasswordResetEmail(email);
@@ -96,7 +96,7 @@ const Loging = () => {
                     </button>
                     <ToastContainer />
                     <button onClick={() => { signInWithGoogle() }} className=
-                        "btn btn-danger">SignIn with Google</button>
+                        "signIn">SignIn with Google</button>
                 </div>
 
             </form>

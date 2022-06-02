@@ -30,12 +30,10 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/latest">Latest</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/item">inventorie Item</Link>
-              </li>   
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/blog">Blog</Link>
-              </li>
+              {/* <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/item">inventorie</Link>
+              </li>    */}
+           
               <li className="nav-item">
                  { 
                     user &&  <Link className="nav-link active" aria-current="page" to="/manage">ManageItem</Link>

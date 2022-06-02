@@ -34,11 +34,11 @@ const Services = () => {
                                     <div class="card-body">
                                         <h5 class="card-title"> <span>Name:</span> {name} </h5>
                                         <p class="card-text"><span>Description</span> {des}</p>
-                                        <p class="card-text"><span>Price:</span> {price}</p>
+                                        <p class="card-text"><span>Price:</span> {price}</p> 
                                         <p class="card-text"><span>Quantity:</span> {quantity}</p>
                                           <div className="btn_wraper  "> 
                                           <button onClick={()=>{navigateUpdate(_id)}} class="btn btn-primary btns"> updated</button> 
-                                          <Link to="/inventory" className='btn btn-primary btns'> Inventories </Link>
+                                          <Link to="/manage" className='btn btn-primary btns'> Inventories </Link>
                                           
                                           </div>
                                     </div>

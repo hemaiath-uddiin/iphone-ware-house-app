@@ -4,7 +4,7 @@ import { button } from 'react-router-dom';
 const ManageInventory = () => {
     const [inventory, setInventory] = useState([]);
     useEffect(() => {
-        fetch('http://https://protected-dawn-94435.herokuapp.com/item')
+        fetch('https://protected-dawn-94435.herokuapp.com/item')
             .then(res => res.json())
             .then(data => setInventory(data))
 
@@ -35,6 +35,7 @@ const ManageInventory = () => {
 
     return (
         <div>
+          
             <div className="row">
 
                 {
