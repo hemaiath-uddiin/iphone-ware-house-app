@@ -70,8 +70,8 @@ const Loging = () => {
                     "mb-3">
                     <label for="exampleInputEmail1" className=
                         "form-label">Email address</label>
-                    <input onBlur={handleEmail} type="email" className=
-                        "form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                    <input placeholder='Enter Email' onBlur={handleEmail} type="email" className=
+                        "form-control" id="exampleInputEmail1" aria-describedby="emailHelp " />
                     <div id="emailHelp" className=
                         "form-text">We'll never share your email with anyone else.</div>
                 </div>
@@ -79,7 +79,7 @@ const Loging = () => {
                     "mb-3">
                     <label for="exampleInputPassword1" className=
                         "form-label">Password</label>
-                    <input onBlur={handlePassword} type="password" className=
+                    <input placeholder='Enter Password' onBlur={handlePassword} type="password" className=
                         "form-control" id="exampleInputPassword1" />
                 </div>
 

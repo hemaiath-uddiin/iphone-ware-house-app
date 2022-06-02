@@ -1,6 +1,6 @@
 .container.loging {
-    margin-top: 75px;
-    background: #e5e5e5;
+  
+  
     padding: 10px;
     border-radius: 10px;
 } 
@@ -13,21 +13,41 @@ span a {
     display: flex;
     justify-content: center;
 }
+label {
+    font-weight: bold;
+} 
+
+
 
 .btns button {margin: 10px;}
 
 .btns button {background: #343434;break-after: column;color: #fffffffa;font-weight: bold;border: none;padding: 8px;border-radius: 5px;}
 
-.btns button:hover {background: white;color: black;} 
+.btns button:hover {background: white;color: black;}  
+form.loging {
+    background: #f1f1f1;
+    padding: 14px;
+    border-radius: 5px;
+    box-shadow: -2px 2px 6px 5px silver;
+    cursor: pointer;
+} 
+.singIn p {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
 @media (max-width: 980px) {
     .btns button {
      font-size: 10px; 
      margin: 10px 5px; 
-     padding: 5px 6px ;
+     padding: 5px 6px ; 
+
      
      
 
-    } 
+    }  
+  
     .btns { 
         margin: 10px;
     }
@@ -36,6 +56,9 @@ span a {
     .btns {
      flex-direction: column; 
      font-size:15px ;
-    } 
+    }  
+    
    
-  }
+  } 
+
+ 
