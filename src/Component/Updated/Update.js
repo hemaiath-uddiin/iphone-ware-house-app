@@ -13,10 +13,11 @@ const Update = ({ children }) => {
     const [update,setUpdate] = useState('') ; 
       const updateQuantity =(e)=>{ 
           setUpdate(e.target.value)   
-       
+
            
           
-      }   
+      }    
+      
  
       const notify = () => toast("Quantity has been Restock");
       //load data 
@@ -53,7 +54,8 @@ const Update = ({ children }) => {
        } 
        //update quantity
     const updateaddQuantity =(e)=>{ 
-        e.preventDefault() ; 
+        e.preventDefault() ;  
+       
        
         let newQuantity = update ; 
          if(newQuantity> 0){ 
@@ -108,8 +110,8 @@ const Update = ({ children }) => {
                                 <p className="card-text"> <span>Price: </span>  {setupdateDtls.price}  </p>
                                 <p className="card-text"> <span>Description: </span>  {setupdateDtls.des}  </p>
                                   <div className="btn_wraper"> 
-                                  <button onClick={()=>{deleverd()}}  className='btn btn-danger'> Deleverd</button>
-                                <Link  to="/inventory" className='btn btn-primary'> Manage Inventories </Link>
+                                  <button onClick={()=>{deleverd()}}  className='btn_deleverd'> Deleverd</button>
+                                <Link  to="/inventory" className='btn_link'> Manage Inventories </Link>
                                
                                   </div> 
                                   <div className="restock">

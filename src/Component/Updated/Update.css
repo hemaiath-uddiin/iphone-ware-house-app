@@ -51,4 +51,33 @@
 
  button.restock_btn:hover {
      background: #3838e9;
- }
+ } 
+ .btn_deleverd {
+    background: #141414;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn_wraper {}
+
+a.btn_link {
+    background: black;
+    padding: 4px;
+    margin: 24px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 3px;
+}
+
+.btn_deleverd:hover {
+    background: #fff;
+    color: #2a2525;
+    border-color: #7272b5;
+}
+
+a.btn_link:hover {
+    background: #fff;
+    color: #322929;
+}
